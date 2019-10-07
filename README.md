@@ -1,1 +1,3 @@
 # FriendFinder
+
+For finding friends.
