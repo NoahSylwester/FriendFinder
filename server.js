@@ -13,6 +13,7 @@ var PORT = process.env.PORT || 3000;
 // app.use(express.urlencoded({ extended: true }));
 // app.use(express.json());
 app.use('/', htmlRoutes);
+app.use('/api', apiRoutes);
 
 app.use(express.static(__dirname + '/assets/images/'));
 
