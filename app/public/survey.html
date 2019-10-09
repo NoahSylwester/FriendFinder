@@ -10,386 +10,431 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Friend Finder</title>
+  <style>
+    .question {
+      padding: 10px;
+    }
+  </style>
 </head>
 
-<body class="container">
+<body class="container" style="padding: 30px;">
   <div class="row">
     <h1 class="col">Survey Questions</h1>
   </div>
   <div class="row">
-    <h2 class="col">About You</h1>
+    <h2 class="col question">About You</h1>
   </div>
+  <br/>
   <div class="row">
-    <div class="col">
+    <div id="question1" class="col question">
       <h3>Question 1</h3>
       <p>What is to do more like?</p>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-        <label class="form-check-label" for="exampleRadios1">
+        <input class="form-check-input" type="radio" name="question1" id="question1-1" value="1">
+        <label class="form-check-label" for="question1-1">
           Strongly disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="question1" id="question1-2" value="2">
+        <label class="form-check-label" for="question1-2">
           Disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question1" id="question1-3" value="3">
+        <label class="form-check-label" for="question1-3">
           Neither agree nor disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question1" id="question1-4" value="4">
+        <label class="form-check-label" for="question1-4">
           Agree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question1" id="question1-5" value="5">
+        <label class="form-check-label" for="question1-5">
           Strongly agree
         </label>
       </div>
     </div>
   </div>
+  <br/>
   <div class="row">
-    <div class="col">
+    <div id="question2" class="col question">
       <h3>Question 2</h3>
       <p>Text</p>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-        <label class="form-check-label" for="exampleRadios1">
+        <input class="form-check-input" type="radio" name="question2" id="question2-1" value="1">
+        <label class="form-check-label" for="question2-1">
           Strongly disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="question2" id="question2-2" value="2">
+        <label class="form-check-label" for="question2-2">
           Disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question2" id="question2-3" value="3">
+        <label class="form-check-label" for="question2-3">
           Neither agree nor disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question2" id="question2-4" value="4">
+        <label class="form-check-label" for="question2-4">
           Agree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question2" id="question2-5" value="5">
+        <label class="form-check-label" for="question2-5">
           Strongly agree
         </label>
       </div>
     </div>
   </div>
+  <br/>
   <div class="row">
-    <div class="col">
+    <div id="question3" class="col question">
       <h3>Question 3</h3>
       <p>Text</p>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-        <label class="form-check-label" for="exampleRadios1">
+        <input class="form-check-input" type="radio" name="question3" id="question3-1" value="1">
+        <label class="form-check-label" for="question3-1">
           Strongly disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="question3" id="question3-2" value="2">
+        <label class="form-check-label" for="question3-2">
           Disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question3" id="question3-3" value="3">
+        <label class="form-check-label" for="question3-3">
           Neither agree nor disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question3" id="question3-4" value="4">
+        <label class="form-check-label" for="question3-4">
           Agree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question3" id="question3-5" value="5">
+        <label class="form-check-label" for="question3-5">
           Strongly agree
         </label>
       </div>
     </div>
   </div>
+  <br/>
   <div class="row">
-    <div class="col">
+    <div id="question4" class="col question">
       <h3>Question 4</h3>
       <p>Text</p>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-        <label class="form-check-label" for="exampleRadios1">
+        <input class="form-check-input" type="radio" name="question4" id="question4-1" value="1">
+        <label class="form-check-label" for="question4-1">
           Strongly disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="question4" id="question4-2" value="2">
+        <label class="form-check-label" for="question4-2">
           Disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question4" id="question4-3" value="3">
+        <label class="form-check-label" for="question4-3">
           Neither agree nor disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question4" id="question4-4" value="4">
+        <label class="form-check-label" for="question4-4">
           Agree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question4" id="question4-5" value="5">
+        <label class="form-check-label" for="question4-5">
           Strongly agree
         </label>
       </div>
     </div>
   </div>
+  <br/>
   <div class="row">
-    <div class="col">
+    <div id="question5" class="col question">
       <h3>Question 5</h3>
       <p>Text</p>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-        <label class="form-check-label" for="exampleRadios1">
+        <input class="form-check-input" type="radio" name="question5" id="question5-1" value="1">
+        <label class="form-check-label" for="question5-1">
           Strongly disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="question5" id="question5-2" value="2">
+        <label class="form-check-label" for="question5-2">
           Disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question5" id="question5-3" value="3">
+        <label class="form-check-label" for="question5-3">
           Neither agree nor disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question5" id="question5-4" value="4">
+        <label class="form-check-label" for="question5-4">
           Agree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question5" id="question5-5" value="5">
+        <label class="form-check-label" for="question5-5">
           Strongly agree
         </label>
       </div>
     </div>
   </div>
+  <br/>
   <div class="row">
-    <div class="col">
+    <div id="question6" class="col question">
       <h3>Question 6</h3>
       <p>Text</p>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-        <label class="form-check-label" for="exampleRadios1">
+        <input class="form-check-input" type="radio" name="question6" id="question6-1" value="1">
+        <label class="form-check-label" for="question6-1">
           Strongly disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="question6" id="question6-2" value="2">
+        <label class="form-check-label" for="question6-2">
           Disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question6" id="question6-3" value="3">
+        <label class="form-check-label" for="question6-3">
           Neither agree nor disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question6" id="question6-4" value="4">
+        <label class="form-check-label" for="question6-4">
           Agree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question6" id="question6-5" value="5">
+        <label class="form-check-label" for="question6-5">
           Strongly agree
         </label>
       </div>
     </div>
   </div>
+  <br/>
   <div class="row">
-    <div class="col">
+    <div id="question7" class="col question">
       <h3>Question 7</h3>
       <p>Text</p>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-        <label class="form-check-label" for="exampleRadios1">
+        <input class="form-check-input" type="radio" name="question7" id="question7-1" value="1">
+        <label class="form-check-label" for="question7-1">
           Strongly disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="question7" id="question7-2" value="2">
+        <label class="form-check-label" for="question7-2">
           Disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question7" id="question7-3" value="3">
+        <label class="form-check-label" for="question7-3">
           Neither agree nor disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question7" id="question7-4" value="4">
+        <label class="form-check-label" for="question7-4">
           Agree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question7" id="question7-5" value="5">
+        <label class="form-check-label" for="question7-5">
           Strongly agree
         </label>
       </div>
     </div>
   </div>
+  <br/>
   <div class="row">
-    <div class="col">
+    <div id="question8" class="col question">
       <h3>Question 8</h3>
       <p>Text</p>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-        <label class="form-check-label" for="exampleRadios1">
+        <input class="form-check-input" type="radio" name="question8" id="question8-1" value="1">
+        <label class="form-check-label" for="question8-1">
           Strongly disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="question8" id="question8-2" value="2">
+        <label class="form-check-label" for="question8-2">
           Disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question8" id="question8-3" value="3">
+        <label class="form-check-label" for="question8-3">
           Neither agree nor disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question8" id="question8-4" value="4">
+        <label class="form-check-label" for="question8-4">
           Agree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question8" id="question8-5" value="5">
+        <label class="form-check-label" for="question8-5">
           Strongly agree
         </label>
       </div>
     </div>
   </div>
+  <br/>
   <div class="row">
-    <div class="col">
+    <div id="question9" class="col question">
       <h3>Question 9</h3>
       <p>Text</p>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-        <label class="form-check-label" for="exampleRadios1">
+        <input class="form-check-input" type="radio" name="question9" id="question9-1" value="1">
+        <label class="form-check-label" for="question9-1">
           Strongly disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="question9" id="question9-2" value="2">
+        <label class="form-check-label" for="question9-2">
           Disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question9" id="question9-3" value="3">
+        <label class="form-check-label" for="question9-3">
           Neither agree nor disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question9" id="question9-4" value="4">
+        <label class="form-check-label" for="question9-4">
           Agree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question9" id="question9-5" value="5">
+        <label class="form-check-label" for="question9-5">
           Strongly agree
         </label>
       </div>
     </div>
   </div>
+  <br/>
   <div class="row">
-    <div class="col">
+    <div id="question10" class="col question">
       <h3>Question 10</h3>
       <p>Text</p>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-        <label class="form-check-label" for="exampleRadios1">
+        <input class="form-check-input" type="radio" name="question10" id="question10-1" value="1">
+        <label class="form-check-label" for="question10-1">
           Strongly disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="question10" id="question10-2" value="2">
+        <label class="form-check-label" for="question10-2">
           Disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question10" id="question10-3" value="3">
+        <label class="form-check-label" for="question10-3">
           Neither agree nor disagree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question10" id="question10-4" value="4">
+        <label class="form-check-label" for="question10-4">
           Agree
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-        <label class="form-check-label" for="exampleRadios3">
+        <input class="form-check-input" type="radio" name="question10" id="question10-5" value="5">
+        <label class="form-check-label" for="question10-5">
           Strongly agree
         </label>
       </div>
     </div>
   </div>
+  <br/>
+  <div class="row">
+    <div id="question1" class="col question">
+        <br/>
+        <button id="submit-button" type="button" class="btn btn-primary">Find your match!</button>
+    </div>
+  </div>
 
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script>
+    $('#submit-button').on('click', function(event){
+      event.preventDefault();
+      var answers = [];
+      var unansweredNumbers = [];
+      for (let i = 1; i < 11; i++) {
+        let answer = $(`input[name='question${i}']:checked`).val();
+        if (answer === undefined) {
+          unansweredNumbers.push(i);
+        }
+        answers.push(answer);
+      }
+      if (answers.includes(undefined)) {
+        for (let i = 0; i < unansweredNumbers.length; i++) {
+          $(`#question${unansweredNumbers[i]}`).css({'background-color':'red'});
+        }
+        alert("You must answer all questions!");
+      }
+      else {
+        alert('great!');
+        $.post("/api/friends", answers, function (data) {
+          console.log(data);
+        }, "json");
+      }
+    })
+  </script>
 </body>
 
 </html>
