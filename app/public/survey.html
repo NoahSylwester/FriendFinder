@@ -429,6 +429,13 @@
   <script>
     $('#submit-button').on('click', function(event){
       event.preventDefault();
+      // reset colors
+      for (let i = 1; i < 11; i++) {
+        $(`#question${i}`).css({ 'background-color': 'white' });
+      }
+      $('#name').css({ 'background-color': 'white' });
+      $('#photo').css({ 'background-color': 'white' });
+
       var answers = [];
       var unansweredNumbers = [];
       var name = $('#nameInput').val();
@@ -443,12 +450,12 @@
       if (answers.includes(undefined) || name === '' || photo === '') {
         for (let i = 0; i < unansweredNumbers.length; i++) {
           $(`#question${unansweredNumbers[i]}`).css({'background-color':'red'});
-          if (name === '') {
-            $('#name').css({'background-color':'red'});
-          }
-          if (photo === '') {
-            $('#photo').css({'background-color':'red'});
-          }
+        }
+        if (name === '') {
+          $('#name').css({ 'background-color': 'red' });
+        }
+        if (photo === '') {
+          $('#photo').css({ 'background-color': 'red' });
         }
         alert("You must answer all questions!");
       }
