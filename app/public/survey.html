@@ -429,6 +429,7 @@
   <script>
     $('#submit-button').on('click', function(event){
       event.preventDefault();
+
       // reset colors
       for (let i = 1; i < 11; i++) {
         $(`#question${i}`).css({ 'background-color': 'white' });
@@ -436,6 +437,7 @@
       $('#name').css({ 'background-color': 'white' });
       $('#photo').css({ 'background-color': 'white' });
 
+      // grab user inputs from survey interface
       var answers = [];
       var unansweredNumbers = [];
       var name = $('#nameInput').val();
@@ -443,10 +445,13 @@
       for (let i = 1; i < 11; i++) {
         let answer = $(`input[name='question${i}']:checked`).val();
         if (answer === undefined) {
+          // track unanswered questions
           unansweredNumbers.push(i);
         }
+        // build answers array from all user inputs
         answers.push(answer);
       }
+      // check if unanswered questions exist, if they do highlight them and deny progress
       if (answers.includes(undefined) || name === '' || photo === '') {
         for (let i = 0; i < unansweredNumbers.length; i++) {
           $(`#question${unansweredNumbers[i]}`).css({'background-color':'red'});
@@ -459,6 +464,7 @@
         }
         alert("You must answer all questions!");
       }
+      // if everything answered, send POST request with completed user object
       else {
         alert('great!');
         $.post("/api/friends", {name: name, photo: photo, scores: answers}, function (data) {
