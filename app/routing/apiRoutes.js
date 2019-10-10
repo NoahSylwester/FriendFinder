@@ -15,9 +15,25 @@ router.post("/friends", function(req, res) {
   for (let i = 0; i < input.scores.length; i++) {
     input.scores[i] = parseInt(input.scores[i], 10);
   }
+  var minimum = 50;
+  var match;
+
+// match input to most appropriate friend in list
+  for (let i = 0; i < friends.length; i++) {
+    var total = 0;
+    for (let j = 0; j < friends[i].scores.length; j++) {
+      total += Math.abs(friends[i].scores[j] - input.scores[j])
+    }
+    if  (minimum > total) {
+      minimum = total;
+      match = friends[i];
+    }
+  }
+
+
   friends.push(input);
   console.log(req.body);
-  res.json(friends);
+  res.json(match);
 });
 
 module.exports = router;
