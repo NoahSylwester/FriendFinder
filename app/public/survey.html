@@ -14,15 +14,32 @@
     .question {
       padding: 10px;
     }
+    #name, #photo {
+      padding: 10px;
+    }
   </style>
 </head>
 
 <body class="container" style="padding: 30px;">
   <div class="row">
-    <h1 class="col">Survey Questions</h1>
+    <div class="col question">
+      <h1>Survey Questions</h1>
+    </div>
   </div>
   <div class="row">
-    <h2 class="col question">About You</h1>
+    <div class="col question">
+      <h2>About You</h2>
+      <form>
+        <div id="name" class="form-group">
+          <label for="nameInput">Name</label>
+          <input type="text" class="form-control" id="nameInput" placeholder="Name">
+        </div>
+        <div id="photo" class="form-group">
+          <label for="photoUrl">Photo URL</label>
+          <input type="text" class="form-control" id="photoUrl" placeholder="Your photo (must be a URL)">
+        </div>
+      </form>
+    </div>
   </div>
   <br/>
   <div class="row">
@@ -402,7 +419,7 @@
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
@@ -414,6 +431,8 @@
       event.preventDefault();
       var answers = [];
       var unansweredNumbers = [];
+      var name = $('#nameInput').val();
+      var photo = $('#photoUrl').val();
       for (let i = 1; i < 11; i++) {
         let answer = $(`input[name='question${i}']:checked`).val();
         if (answer === undefined) {
@@ -421,15 +440,21 @@
         }
         answers.push(answer);
       }
-      if (answers.includes(undefined)) {
+      if (answers.includes(undefined) || name === '' || photo === '') {
         for (let i = 0; i < unansweredNumbers.length; i++) {
           $(`#question${unansweredNumbers[i]}`).css({'background-color':'red'});
+          if (name === '') {
+            $('#name').css({'background-color':'red'});
+          }
+          if (photo === '') {
+            $('#photo').css({'background-color':'red'});
+          }
         }
         alert("You must answer all questions!");
       }
       else {
         alert('great!');
-        $.post("/api/friends", answers, function (data) {
+        $.post("/api/friends", {name: name, photo: photo, scores: answers}, function (data) {
           console.log(data);
         }, "json");
       }

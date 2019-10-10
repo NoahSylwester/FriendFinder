@@ -11,8 +11,13 @@ router.get("/friends", function(req, res) {
 
 router.post("/friends", function(req, res) {
   var input = req.body;
+  // input is received as string, needs to be converted to numbers on server
+  for (let i = 0; i < input.scores.length; i++) {
+    input.scores[i] = parseInt(input.scores[i], 10);
+  }
   friends.push(input);
-  console.log(friends);
+  console.log(req.body);
+  res.json(friends);
 });
 
 module.exports = router;
