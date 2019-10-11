@@ -168,6 +168,23 @@ var friends = [
       3,
       4
     ]
+},
+{
+  "name": "King Kong",
+  "photo": "https://cdn.vox-cdn.com/thumbor/zD4ZTTBKutLuKAYr6CV1L3cjS0c=/0x0:2864x1200/1200x800/filters:focal(799x609:1257x1067)/cdn.vox-cdn.com/uploads/chorus_image/image/53591117/kongyell.0.jpg",
+  "bio": "I'm a big softie deep down.",
+  "scores": [
+      2,
+      2,
+      1,
+      2,
+      5,
+      4,
+      1,
+      3,
+      3,
+      4
+    ]
 }
 ]
 
