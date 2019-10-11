@@ -14,6 +14,12 @@
   <style>
     body {
       background-color: rgb(241, 241, 241);
+      font-family: 'Cinzel', serif;
+    }
+    img {
+      object-fit: contain;
+      width: 80%;
+      margin-bottom: 20px;
     }
     h1 {
       text-align: center;
@@ -24,12 +30,14 @@
     }
     .question {
       padding: 10px;
-      font-family: 'Cinzel', serif;
       border-radius: 7px;
     }
     #name, #photo, #bio {
       padding: 10px;
       border-radius: 7px;
+    }
+    #result-modal {
+      text-align: center;
     }
   </style>
 </head>
@@ -436,6 +444,27 @@
     </div>
   </div>
 
+
+  <!-- pop-up modal -->
+  <div id="result-modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Results</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Alert!</p>
+        </div>
+        <div class="modal-footer">
+          <button id="modal-button" type="button" class="btn btn-warning" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -444,6 +473,13 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script>
+    var surveyDone = false;
+    $('#modal-button').on('click', function(event) {
+      event.preventDefault();
+      if (surveyDone) {
+        window.location = '/';
+      };
+    });
     $('#submit-button').on('click', function(event){
       event.preventDefault();
 
@@ -473,24 +509,33 @@
       // check if unanswered questions exist, if they do highlight them and deny progress
       if (answers.includes(undefined) || name === '' || photo === '') {
         for (let i = 0; i < unansweredNumbers.length; i++) {
-          $(`#question${unansweredNumbers[i]}`).css({'background-color':'rgb(167, 0, 0)'});
+          $(`#question${unansweredNumbers[i]}`).css({'background-color':'rgba(100, 0, 0, 0.3)'});
         }
         if (name === '') {
-          $('#name').css({ 'background-color': 'rgb(167, 0, 0)' });
+          $('#name').css({ 'background-color': 'rgba(100, 0, 0, 0.3)' });
         }
         if (photo === '') {
-          $('#photo').css({ 'background-color': 'rgb(167, 0, 0)' });
+          $('#photo').css({ 'background-color': 'rgba(100, 0, 0, 0.3)' });
         }
         if (bio === '') {
-          $('#bio').css({ 'background-color': 'rgb(167, 0, 0)' });
+          $('#bio').css({ 'background-color': 'rgba(100, 0, 0, 0.3)' });
         }
-        alert("You must answer all questions!");
+        $('.modal-title').text("Wait a minute!");
+        $('.modal-body p').text("Fill out all the required fields.");
+        $('#modal-button').text("Oh, my mistake!");
+        $('#result-modal').modal("show");
       }
       // if everything answered, send POST request with completed user object
       else {
-        alert('great!');
-        $.post("/api/friends", {name: name, photo: photo, scores: answers}, function (data) {
+        surveyDone = true;
+        $.post("/api/friends", {name: name, photo: photo, bio: bio, scores: answers}, function (data) {
           console.log(data);
+        $('.modal-title').text(`Your match: ${data.name}`);
+        $('.modal-body').html('<img><br/><p></p>');
+        $('.modal-body img').attr({"src":data.photo});
+        $('.modal-body p').text(data.bio);
+        $('#modal-button').html("Ok!");
+        $('#result-modal').modal("show");
         }, "json");
       }
     })
