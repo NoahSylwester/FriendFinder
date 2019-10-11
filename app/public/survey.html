@@ -10,12 +10,26 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Friend Finder</title>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
   <style>
+    body {
+      background-color: rgb(241, 241, 241);
+    }
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+    }
+    h1, h2, h3 {
+      color: rgb(80, 80, 0);
+    }
     .question {
       padding: 10px;
+      font-family: 'Cinzel', serif;
+      border-radius: 7px;
     }
-    #name, #photo {
+    #name, #photo, #bio {
       padding: 10px;
+      border-radius: 7px;
     }
   </style>
 </head>
@@ -37,6 +51,10 @@
         <div id="photo" class="form-group">
           <label for="photoUrl">Photo URL</label>
           <input type="text" class="form-control" id="photoUrl" placeholder="Your photo (must be a URL)">
+        </div>
+        <div id="bio" class="form-group">
+          <label for="bioText">Bio</label>
+          <input type="text" class="form-control" id="bioText" placeholder="Something you'd like us to know about you">
         </div>
       </form>
     </div>
@@ -414,7 +432,7 @@
   <div class="row">
     <div id="question1" class="col question">
         <br/>
-        <button id="submit-button" type="button" class="btn btn-primary">Find your match!</button>
+        <button id="submit-button" type="button" class="btn btn-warning">Find your match!</button>
     </div>
   </div>
 
@@ -435,12 +453,14 @@
       }
       $('#name').css({ 'background-color': 'white' });
       $('#photo').css({ 'background-color': 'white' });
+      $('#bio').css({ 'background-color': 'white' });
 
       // grab user inputs from survey interface
       var answers = [];
       var unansweredNumbers = [];
       var name = $('#nameInput').val();
       var photo = $('#photoUrl').val();
+      var bio= $('#bioText').val();
       for (let i = 1; i < 11; i++) {
         let answer = $(`input[name='question${i}']:checked`).val();
         if (answer === undefined) {
@@ -453,13 +473,16 @@
       // check if unanswered questions exist, if they do highlight them and deny progress
       if (answers.includes(undefined) || name === '' || photo === '') {
         for (let i = 0; i < unansweredNumbers.length; i++) {
-          $(`#question${unansweredNumbers[i]}`).css({'background-color':'red'});
+          $(`#question${unansweredNumbers[i]}`).css({'background-color':'rgb(167, 0, 0)'});
         }
         if (name === '') {
-          $('#name').css({ 'background-color': 'red' });
+          $('#name').css({ 'background-color': 'rgb(167, 0, 0)' });
         }
         if (photo === '') {
-          $('#photo').css({ 'background-color': 'red' });
+          $('#photo').css({ 'background-color': 'rgb(167, 0, 0)' });
+        }
+        if (bio === '') {
+          $('#bio').css({ 'background-color': 'rgb(167, 0, 0)' });
         }
         alert("You must answer all questions!");
       }
