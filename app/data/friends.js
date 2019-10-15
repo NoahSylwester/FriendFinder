@@ -185,8 +185,41 @@ var friends = [
       3,
       4
     ]
+},
+{
+  "name": "Mokele-mbembe",
+  "photo": "https://www.science-rumors.com/wp-content/uploads/2016/09/10-Evidences-Proof-the-Mokele-Mbembe-Still-Alive.jpg",
+  "bio": "We can grow old together in my swamp. I'd love a friend.",
+  "scores": [
+      2,
+      2,
+      1,
+      4,
+      5,
+      1,
+      1,
+      4,
+      4,
+      4
+    ]
+},
+{
+  "name": "Grootslang",
+  "photo": "http://pm1.narvii.com/7070/09af17325b9137f490e0d00fb925667ab7044720r5-320-320_00.jpg",
+  "bio": "I love long walks, water, and the open air.",
+  "scores": [
+      2,
+      1,
+      4,
+      1,
+      5,
+      4,
+      4,
+      5,
+      1,
+      5
+    ]
 }
 ]
-
 
 module.exports = friends;
